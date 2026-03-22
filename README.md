@@ -28,26 +28,3 @@ Small-Bank/
 ├── Loan.cs                # Loan Management Class
 ├── IReportable.cs         # Reporting Interface
 └── Small-Bank.csproj      # Project Configuration
-⚙️ How It Works (Code Example)
-// 1. Initialize the reporting list
-List<IReportable> Report = new List<IReportable>();
-
-// 2. Instantiate various financial accounts
-SavingsAccount s1 = new("fayez", 5000);     // Savings: 5000 balance
-CurrentAccount c1 = new("zahree", 10000);   // Current: 10000 balance
-Loan l1 = new("noor", 50000);               // Loan: 50000 amount
-
-// 3. Populate the report list
-Report.Add(s1);
-Report.Add(c1);
-Report.Add(l1);
-
-// 4. Generate the unified financial report
-foreach (IReportable t in Report) 
-{
-    Console.WriteLine(t.ToString());
-}
-📊 Expected Output
-AccountNo[1001]||ClientName:[fayez] || Amount:[5250]
-AccountNo[1002]||ClientName:[zahree] || Amount:[9950]
-ClientName: noor | Amount: 50000 | Status: Pending
